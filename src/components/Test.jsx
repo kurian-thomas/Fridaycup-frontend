@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { Sidebar_nav, Header_nav } from "./shared/header/Header";
+import Navbar from "./shared/header/Nav_bar";
 
 class Test extends Component {
   state = {};
   render() {
     return (
       <div>
-        <Header_nav />
-        <Sidebar_nav />
+        <Navbar />
       </div>
     );
   }

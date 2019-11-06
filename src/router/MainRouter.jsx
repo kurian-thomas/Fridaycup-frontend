@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Test from "../components/Test";
-import Home from "../components/home/Home";
+import Navbar from "../components/shared/header/Nav_bar";
 
 class Mainrouter extends Component {
   state = {};
@@ -9,7 +9,7 @@ class Mainrouter extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Navbar} />
           <Route exact path="/test" component={Test} />
         </Switch>
       </Router>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Sidebar_nav, Header_nav } from "../shared/header/Header";
-class Home extends Component {
+import { Sidebar_nav, Header_nav } from "./sidebar_head";
+class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = { visible: false };
@@ -21,4 +21,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Navbar;

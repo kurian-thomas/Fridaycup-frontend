@@ -51,6 +51,9 @@ class Header_nav extends Component {
   render() {
     const { activeItem } = this.state;
     const { visible, onChange } = this.props;
+    const titleStyle = {
+      bottom: "0px"
+    };
     return (
       <div>
         <Menu pointing secondary>
@@ -58,7 +61,7 @@ class Header_nav extends Component {
             active={activeItem === "home"}
             onClick={() => onChange("visible", true)}
           >
-            <Icon name="bars" />
+            <Icon name="bars" size="large" />
           </Menu.Item>
 
           <Menu.Menu position="right">
@@ -66,7 +69,11 @@ class Header_nav extends Component {
               name="FRIDAY CUP"
               active={activeItem === "FRIDAY CUP"}
               onClick={this.handleItemClick}
-            />
+            >
+              <div>
+                <h2 style={titleStyle}>FRIDAY CUP</h2>
+              </div>
+            </Menu.Item>
           </Menu.Menu>
           <Menu.Menu position="right"></Menu.Menu>
         </Menu>
