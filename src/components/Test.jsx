@@ -1,9 +1,15 @@
 import React, { Component } from "react";
+import { Sidebar_nav, Header_nav } from "./shared/header/Header";
 
 class Test extends Component {
   state = {};
   render() {
-    return <h1>This is a test route</h1>;
+    return (
+      <div>
+        <Header_nav />
+        <Sidebar_nav />
+      </div>
+    );
   }
 }
 
