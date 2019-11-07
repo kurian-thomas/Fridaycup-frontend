@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Header, Icon, Image, Menu, Segment, Sidebar } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import { browserHistory } from "react-router";
+import "./header.css";
 
 class Sidebar_nav extends Component {
   state = { activeItem: "home" };
@@ -54,6 +54,22 @@ class Header_nav extends Component {
     const titleStyle = {
       bottom: "0px"
     };
+    const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const month = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ];
+    var date = new Date();
     return (
       <div>
         <Menu pointing secondary>
@@ -69,13 +85,20 @@ class Header_nav extends Component {
               name="FRIDAY CUP"
               active={activeItem === "FRIDAY CUP"}
               onClick={this.handleItemClick}
+              href="/"
             >
               <div>
                 <h2 style={titleStyle}>FRIDAY CUP</h2>
               </div>
             </Menu.Item>
           </Menu.Menu>
-          <Menu.Menu position="right"></Menu.Menu>
+          <Menu.Menu position="right">
+            <div class="date">
+              <span class="day">{("0" + date.getDate()).slice(-2)}</span>
+              <span class="month">{month[date.getMonth().toString()]}</span>
+              <span class="year">{date.getFullYear().toString()}</span>
+            </div>
+          </Menu.Menu>
         </Menu>
       </div>
     );
