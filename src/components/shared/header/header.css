@@ -1,0 +1,36 @@
+.date {
+  position: relative;
+  width: 70px;
+  font-family: Georgia, serif;
+  color: #3e3e3e;
+  margin: 0 auto;
+}
+
+.day,
+.month,
+.year {
+  position: absolute;
+}
+
+.day {
+  font-size: 200%;
+  top: 45%;
+  color: black;
+}
+
+.month {
+  top: 0;
+  left: -6%;
+  font-size: 140%;
+  color: black;
+}
+
+.year {
+  top: 30%;
+  right: 5%;
+  font-size: 150%;
+  rotation: -90deg !important;
+  /* ** Hacks ** */
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+}
